@@ -9,11 +9,9 @@ yarn set version stable
 yarn add metascraper metascraper-author
 yarn add --dev esbuild
 yarn add argparse
-yarn add --dev typescript
-yarn exec 'tsc --init'
 ```
 
-to reprod do:
+to repro do:
 
 ```sh
 yarn run repro
@@ -60,3 +58,5 @@ Error: Command failed: /Users/transverna/code/github/carlgieringer/metascraper-r
   stderr: null
 }
 ```
+
+Running the script with node directly succeeds: `yarn run control`.

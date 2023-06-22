@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "Repro an issue using metascraper with yarn",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "repro": "bin/build-and-run.sh lib/index.js"
+    "repro": "bin/build-and-run.sh lib/index.js",
+    "control": "node --experimental-specifier-resolution=node lib/index.js --url=https://www.npr.org/2023/06/22/1183653543/titan-submersible-missing-adventure-tourism-rescue-risk-cost"
   },
   "author": "",
   "license": "ISC",
