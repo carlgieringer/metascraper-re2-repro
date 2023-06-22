@@ -1,5 +1,19 @@
 # Reproing an issue using esbuild with metascraper
 
+## TODO
+
+* See if removing `--external:./build/Release/re2.node` returns the issue.
+* Try using `@chialab/esbuild-plugin-require-resolve` (requires esbuild node script, can't be used
+  from esbuild CLI) to remove the current error the repro hits:
+
+```
+Error: Cannot find module './xhr-sync-worker.js'
+```
+
+from `require.resolve("./xhr-sync-worker.js")`.
+
+## Description
+
 The commands that were run are roughly:
 
 ```sh
@@ -17,7 +31,7 @@ to repro do:
 yarn run repro
 ```
 
-which on my machine (MacBookPro16,1, macOS 13.1, v18.12.0) yields:
+which on my machine (MacBookPro16,1, macOS 13.1, v14.20.1) yields:
 
 ```sh
 ※ yarn run repro
@@ -59,4 +73,24 @@ Error: Command failed: /Users/transverna/code/github/carlgieringer/metascraper-r
 }
 ```
 
-Running the script with node directly succeeds: `yarn run control`.
+## Control with `node`
+
+Add `"type": "module",` to package.json and run `yarn run control`.
+
+## Build issues
+
+After `yarn install` with node v14.20.1:
+
+```sh
+※ ls node_modules/re2/build/Release
+obj.target
+```
+
+After `npm install`:
+
+```sh
+※ ls node_modules/re2/build/Release
+re2.node
+```
+
+(Upgrading node to 18.12.0 also fixes this install issue.)

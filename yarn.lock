@@ -5,6 +5,42 @@ __metadata:
   version: 6
   cacheKey: 8
 
+"@chialab/esbuild-plugin-require-resolve@npm:^0.17.2":
+  version: 0.17.2
+  resolution: "@chialab/esbuild-plugin-require-resolve@npm:0.17.2"
+  dependencies:
+    "@chialab/esbuild-rna": ^0.17.8
+    "@chialab/estransform": ^0.17.4
+  checksum: 55ec2f70b1f605b789d53ceaa346e1972810bb78e9701ce50107c523d2e8d2829565dbc99342ec7ba6a9e80da5377589c7b8e7a4867e59ec0478ac17a3c4fe66
+  languageName: node
+  linkType: hard
+
+"@chialab/esbuild-rna@npm:^0.17.8":
+  version: 0.17.8
+  resolution: "@chialab/esbuild-rna@npm:0.17.8"
+  dependencies:
+    "@chialab/estransform": ^0.17.4
+    "@chialab/node-resolve": ^0.17.1
+  checksum: 640590b7d4587032c47bda80aff1b907ef5f878506716f4073208ea28015d5e80008d1127a4e717a739a8916a9946263e3df92d3650ada6e6bace9c44594a044
+  languageName: node
+  linkType: hard
+
+"@chialab/estransform@npm:^0.17.4":
+  version: 0.17.4
+  resolution: "@chialab/estransform@npm:0.17.4"
+  dependencies:
+    "@parcel/source-map": ^2.0.0
+  checksum: e6fd9a56793c1697dc120b1a4c9ff4a9489c84b8871af0f8d12b4b65c95dba8e15d3f591827d52cf9a79954d75ddb022de7e60899bd062fdd081e42e7efb4bcb
+  languageName: node
+  linkType: hard
+
+"@chialab/node-resolve@npm:^0.17.1":
+  version: 0.17.1
+  resolution: "@chialab/node-resolve@npm:0.17.1"
+  checksum: 1f06085c9706bcbd5656eda1afc386757f475daa7a92ceb890a6dd5814035620964fbe99948d68bd0db0d1c4666a6c1d8246593bb105cd3393188597741bc212
+  languageName: node
+  linkType: hard
+
 "@esbuild/android-arm64@npm:0.18.6":
   version: 0.18.6
   resolution: "@esbuild/android-arm64@npm:0.18.6"
@@ -209,6 +245,15 @@ __metadata:
   dependencies:
     semver: ^7.3.5
   checksum: a50a6818de5fc557d0b0e6f50ec780a7a02ab8ad07e5ac8b16bf519e0ad60a144ac64f97d05c443c3367235d337182e1d012bbac0eb8dbae8dc7b40b193efd0e
+  languageName: node
+  linkType: hard
+
+"@parcel/source-map@npm:^2.0.0":
+  version: 2.1.1
+  resolution: "@parcel/source-map@npm:2.1.1"
+  dependencies:
+    detect-libc: ^1.0.3
+  checksum: 1fa27a7047ec08faf7fe1dd0e2ae95a27b84697ecfaed029d0b7d06e46d84ed8f98a9dc9d308fe623655f3c985052dcf7622de479bfa6103c44884fb7f6c810a
   languageName: node
   linkType: hard
 
@@ -602,6 +647,15 @@ __metadata:
   version: 2.0.0
   resolution: "depd@npm:2.0.0"
   checksum: abbe19c768c97ee2eed6282d8ce3031126662252c58d711f646921c9623f9052e3e1906443066beec1095832f534e57c523b7333f8e7e0d93051ab6baef5ab3a
+  languageName: node
+  linkType: hard
+
+"detect-libc@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "detect-libc@npm:1.0.3"
+  bin:
+    detect-libc: ./bin/detect-libc.js
+  checksum: daaaed925ffa7889bd91d56e9624e6c8033911bb60f3a50a74a87500680652969dbaab9526d1e200a4c94acf80fc862a22131841145a0a8482d60a99c24f4a3e
   languageName: node
   linkType: hard
 
@@ -1241,6 +1295,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "metascraper-re2-repro@workspace:."
   dependencies:
+    "@chialab/esbuild-plugin-require-resolve": ^0.17.2
     argparse: ^2.0.1
     esbuild: ^0.18.6
     metascraper: ^5.34.7
@@ -1378,17 +1433,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minipass@npm:^5.0.0":
+"minipass@npm:^5.0.0, minipass@npm:^5.0.0 || ^6.0.2":
   version: 5.0.0
   resolution: "minipass@npm:5.0.0"
   checksum: 425dab288738853fded43da3314a0b5c035844d6f3097a8e3b5b29b328da8f3c1af6fc70618b32c29ff906284cf6406b6841376f21caaadd0793c1d5a6a620ea
-  languageName: node
-  linkType: hard
-
-"minipass@npm:^5.0.0 || ^6.0.2":
-  version: 6.0.2
-  resolution: "minipass@npm:6.0.2"
-  checksum: d140b91f4ab2e5ce5a9b6c468c0e82223504acc89114c1a120d4495188b81fedf8cade72a9f4793642b4e66672f990f1e0d902dd858485216a07cd3c8a62fac9
   languageName: node
   linkType: hard
 
@@ -1411,17 +1459,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ms@npm:2.1.2":
+"ms@npm:2.1.2, ms@npm:^2.0.0":
   version: 2.1.2
   resolution: "ms@npm:2.1.2"
   checksum: 673cdb2c3133eb050c745908d8ce632ed2c02d85640e2edb3ace856a2266a813b30c613569bf3354fdf4ea7d1a1494add3bfa95e2713baa27d0c2c71fc44f58f
-  languageName: node
-  linkType: hard
-
-"ms@npm:^2.0.0":
-  version: 2.1.3
-  resolution: "ms@npm:2.1.3"
-  checksum: aa92de608021b242401676e35cfa5aa42dd70cbdc082b916da7fb925c542173e36bce97ea3e804923fe92c0ad991434e4a38327e15a1b5b5f945d66df615ae6d
   languageName: node
   linkType: hard
 

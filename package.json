@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Repro an issue using metascraper with yarn",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "repro": "bin/build-and-run.sh lib/index.js",
@@ -18,6 +17,7 @@
     "metascraper-author": "^5.34.7"
   },
   "devDependencies": {
+    "@chialab/esbuild-plugin-require-resolve": "^0.17.2",
     "esbuild": "^0.18.6",
     "typescript": "^5.1.3"
   }
