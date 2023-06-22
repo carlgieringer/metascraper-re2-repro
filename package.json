@@ -1,0 +1,12 @@
+{
+  "name": "metascraper-re2-repro",
+  "version": "1.0.0",
+  "description": "Repro an issue using metascraper with yarn",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "packageManager": "yarn@3.6.0"
+}
