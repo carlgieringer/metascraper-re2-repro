@@ -17,7 +17,7 @@ to repro do:
 yarn run repro
 ```
 
-which on my machine (MacBookPro16,1, macOS 13.1) yields:
+which on my machine (MacBookPro16,1, macOS 13.1, v18.12.0) yields:
 
 ```sh
 ※ yarn run repro
